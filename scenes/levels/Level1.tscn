@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b041gmfk3p42a"]
+[gd_scene load_steps=4 format=3 uid="uid://b041gmfk3p42a"]
 
 [ext_resource type="PackedScene" uid="uid://dkhhxqc1h33nd" path="res://scenes/entities/Player.tscn" id="1_0omeg"]
 [ext_resource type="PackedScene" uid="uid://dq2tmy2cyajn4" path="res://scenes/entities/ColorPortal.tscn" id="2_cdtds"]
+[ext_resource type="PackedScene" uid="uid://tp0rf3g6jmob" path="res://scenes/entities/Goal.tscn" id="3_e8ux7"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_0omeg")]
-position = Vector2(418, 285)
-
 [node name="ColorPortal" parent="." instance=ExtResource("2_cdtds")]
-position = Vector2(560, 278)
-Color = Color(0.999731, 0.62071, 0.799533, 1)
+position = Vector2(549, 326)
+Color = Color(1, 1, 1, 1)
+
+[node name="Goal" parent="." instance=ExtResource("3_e8ux7")]
+position = Vector2(799, 324)
+Color = Color(1, 1, 1, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_0omeg")]
+position = Vector2(260, 334)

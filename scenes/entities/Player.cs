@@ -1,4 +1,5 @@
 using Godot;
+using Scripts;
 using System;
 
 namespace Scenes.Entities
@@ -16,6 +17,7 @@ namespace Scenes.Entities
 
         public override void _Ready()
         {
+            Color = Colors.Black;
             Area.AreaEntered += OnAreaEntered;
         }
 
@@ -36,6 +38,10 @@ namespace Scenes.Entities
             {
                 MeetColor(colorPortal.Color);
                 parent.QueueFree();
+            }
+            else if (parent is Goal goal)
+            {
+                if (Color == goal.Color) GlobalEvents.Instance.EmitSignal(GlobalEvents.SignalName.LevelWon);
             }
         }
 
