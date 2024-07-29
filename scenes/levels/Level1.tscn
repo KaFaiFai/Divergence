@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b041gmfk3p42a"]
+
+[ext_resource type="PackedScene" uid="uid://dkhhxqc1h33nd" path="res://scenes/entities/Player.tscn" id="1_0omeg"]
+[ext_resource type="PackedScene" uid="uid://dq2tmy2cyajn4" path="res://scenes/entities/ColorPortal.tscn" id="2_cdtds"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0omeg")]
+position = Vector2(418, 285)
+
+[node name="ColorPortal" parent="." instance=ExtResource("2_cdtds")]
+position = Vector2(560, 278)
+Color = Color(0.999731, 0.62071, 0.799533, 1)

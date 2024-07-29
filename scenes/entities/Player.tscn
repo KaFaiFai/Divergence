@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkhhxqc1h33nd"]
+
+[ext_resource type="Script" path="res://scenes/entities/Player.cs" id="1_oi48e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxgt0"]
+size = Vector2(12, 12)
+
+[sub_resource type="Gradient" id="Gradient_l5rmx"]
+offsets = PackedFloat32Array(0, 0.0060241)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3lulj"]
+gradient = SubResource("Gradient_l5rmx")
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_oi48e")
+Speed = 3.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vxgt0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.140625, 0.140625)
+texture = SubResource("GradientTexture2D_3lulj")
