@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://4ctrj2aiuh01"]
+
+[ext_resource type="Script" path="res://scenes/machines/EntryButton.cs" id="1_lb71q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrt4x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phe3w"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.619639, 0.980222, 0.56367, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwnov"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.435251, 0.903522, 0.363573, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73qjj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.435251, 0.903522, 0.363573, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_5jgmc"]
+Button/styles/focus = SubResource("StyleBoxEmpty_vrt4x")
+Button/styles/hover = SubResource("StyleBoxFlat_phe3w")
+Button/styles/normal = SubResource("StyleBoxFlat_bwnov")
+Button/styles/pressed = SubResource("StyleBoxFlat_73qjj")
+
+[node name="EntryButton" type="Button"]
+offset_right = 10.0
+offset_bottom = 10.0
+theme = SubResource("Theme_5jgmc")
+script = ExtResource("1_lb71q")

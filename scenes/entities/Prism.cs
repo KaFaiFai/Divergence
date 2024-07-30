@@ -2,7 +2,6 @@ using Godot;
 using Godot.Collections;
 using Scripts;
 using System;
-using System.ComponentModel;
 
 namespace Scenes.Entities
 {

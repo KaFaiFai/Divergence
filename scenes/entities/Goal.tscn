@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://pukxca0vx8yi"]
+
+[ext_resource type="Script" path="res://scenes/entities/Goal.cs" id="1_jannq"]
+
+[node name="Goal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jannq")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-19, 14, 28, 14, 28, 4, 5, 5, 4, -22, 25, -21, 0, -42, -8, -41, -7, 5, -23, 4)
