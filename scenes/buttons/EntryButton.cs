@@ -10,8 +10,14 @@ namespace Scenes.Buttons
         [Signal] public delegate void ClickedEventHandler();
 
         public Color? Color { get; private set; }
+        public Vector2 GlobalCenter { get => GlobalPosition + Size * Scale / 2; }
 
         public ColorRect ColorRect { get => GetNode<ColorRect>("ColorRect"); }
+
+        public override void _Ready()
+        {
+            ReceiveColor(null);
+        }
 
         public override void _GuiInput(InputEvent @event)
         {

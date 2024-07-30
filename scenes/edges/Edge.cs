@@ -17,19 +17,25 @@ namespace Scenes.Edges
 
         public override void _Ready()
         {
-            Exit.NewColor += (color) => OnNewColor(color);
-            Exit.ClearedColor += () => OnNewColor(null);
+            Exit.NewColor += NewColor;
+            Exit.ClearedColor += ClearedColor;
             RemoveButton.Pressed += OnRemoveButtonPressed;
+        }
+
+        public override void _ExitTree()
+        {
+            Exit.NewColor -= NewColor;
+            Exit.ClearedColor -= ClearedColor;
         }
 
         private void UpdateDisplay()
         {
-            Vector2? exitPosition = Exit?.GlobalPosition;
-            Vector2? entryPosition = Entry?.GlobalPosition;
-            if (exitPosition != null && entryPosition != null)
+            Vector2? exitCenter = Exit?.GlobalCenter;
+            Vector2? entryCenter = Entry?.GlobalCenter;
+            if (exitCenter != null && entryCenter != null)
             {
-                Points = new Vector2[] { exitPosition.Value, entryPosition.Value };
-                RemoveButtonControl.Position = (exitPosition.Value + entryPosition.Value) / 2;
+                Points = new Vector2[] { exitCenter.Value, entryCenter.Value };
+                RemoveButtonControl.Position = (exitCenter.Value + entryCenter.Value) / 2;
             }
             else
             {
@@ -39,13 +45,13 @@ namespace Scenes.Edges
             DefaultColor = Exit?.Color ?? new(1, 1, 1);
         }
 
+        private void NewColor(Color color) => OnNewColor(color);
+        private void ClearedColor() => OnNewColor(null);
+
         private void OnNewColor(Color? color)
         {
-            if (!IsQueuedForDeletion())
-            {
-                DefaultColor = Exit?.Color ?? new(1, 1, 1);
-                Entry.ReceiveColor(color);
-            }
+            DefaultColor = Exit?.Color ?? new(1, 1, 1);
+            Entry.ReceiveColor(color);
         }
 
         private void OnRemoveButtonPressed()

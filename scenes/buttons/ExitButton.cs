@@ -11,8 +11,14 @@ namespace Scenes.Buttons
 
         public Color? Color { get; private set; }
         public bool Disable { get => Color == null; }
+        public Vector2 GlobalCenter { get => GlobalPosition + Size * Scale / 2; }
 
         public ColorRect ColorRect { get => GetNode<ColorRect>("ColorRect"); }
+
+        public override void _Ready()
+        {
+            SetColor(null);
+        }
 
         public override void _GuiInput(InputEvent @event)
         {

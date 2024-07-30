@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Scenes.Edges
 {
-    public partial class EdgeConstructor : Node2D
+    public partial class EdgeConstructor : Node
     {
         [Signal] public delegate void CreatedEdgeEventHandler(Edge edge);
 
@@ -39,7 +39,7 @@ namespace Scenes.Edges
         {
             if (SelectedExit != null && SelectedEntry == null)
             {
-                Vector2 mousePosition = GetGlobalMousePosition();
+                Vector2 mousePosition = GetViewport().GetMousePosition();
                 Line.SetPointPosition(1, mousePosition);
             }
         }
@@ -47,8 +47,8 @@ namespace Scenes.Edges
         private void OnExitButtonClicked(ExitButton exit)
         {
             SelectedExit = exit;
-            Line.Points = new Vector2[] { exit.GlobalPosition, exit.GlobalPosition };
-            GD.Print($"[EdgeConstructor] exit at {exit.GlobalPosition}");
+            Line.Points = new Vector2[] { exit.GlobalCenter, exit.GlobalCenter };
+            GD.Print($"[EdgeConstructor] exit at {exit.GlobalCenter}");
         }
 
         private void OnEntryButtonClicked(EntryButton entry)
@@ -56,7 +56,7 @@ namespace Scenes.Edges
             if (SelectedExit == null) return;
 
             SelectedEntry = entry;
-            GD.Print($"[EdgeConstructor] entry at {entry.GlobalPosition}");
+            GD.Print($"[EdgeConstructor] entry at {entry.GlobalCenter}");
             Edge newEdge = _edgeScene.Instantiate<Edge>();
             newEdge.Exit = SelectedExit;
             newEdge.Entry = SelectedEntry;
