@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b041gmfk3p42a"]
+[gd_scene load_steps=3 format=3 uid="uid://b041gmfk3p42a"]
 
-[ext_resource type="PackedScene" uid="uid://dkhhxqc1h33nd" path="res://scenes/entities/Player.tscn" id="1_0omeg"]
-[ext_resource type="PackedScene" uid="uid://dq2tmy2cyajn4" path="res://scenes/entities/ColorPortal.tscn" id="2_cdtds"]
-[ext_resource type="PackedScene" uid="uid://tp0rf3g6jmob" path="res://scenes/entities/Goal.tscn" id="3_e8ux7"]
+[ext_resource type="PackedScene" uid="uid://be3n1tiyp2w5d" path="res://scenes/entities/ColorSource.tscn" id="1_3t5ko"]
+[ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/entities/Prism.tscn" id="2_op6b1"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="ColorPortal" parent="." instance=ExtResource("2_cdtds")]
-position = Vector2(549, 326)
-Color = Color(1, 1, 1, 1)
+[node name="ColorSource" parent="." instance=ExtResource("1_3t5ko")]
+offset_left = 255.0
+offset_top = 304.0
+offset_right = 255.0
+offset_bottom = 304.0
 
-[node name="Goal" parent="." instance=ExtResource("3_e8ux7")]
-position = Vector2(799, 324)
-Color = Color(1, 1, 1, 1)
-
-[node name="Player" parent="." instance=ExtResource("1_0omeg")]
-position = Vector2(260, 334)
+[node name="Prism" parent="." instance=ExtResource("2_op6b1")]
+offset_left = 576.0
+offset_top = 323.0
+offset_right = 576.0
+offset_bottom = 323.0
