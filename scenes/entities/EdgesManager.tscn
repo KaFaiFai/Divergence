@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqcpjv50vyi1x"]
+
+[ext_resource type="Script" path="res://scenes/entities/EdgesManager.cs" id="1_oxk57"]
+
+[node name="EdgesManager" type="Node"]
+script = ExtResource("1_oxk57")

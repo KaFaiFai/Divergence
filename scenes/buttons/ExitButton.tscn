@@ -10,7 +10,7 @@ shader_parameter/num_horn = 17
 shader_parameter/horn_length = 0.1
 shader_parameter/color = Color(1, 1, 1, 1)
 
-[node name="ExitButton" type="Control"]
+[node name="ExitButton" type="Control" groups=["exit_button"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

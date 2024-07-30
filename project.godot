@@ -23,6 +23,12 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Divergence"
 
+[global_group]
+
+exit_button=""
+entry_button=""
+edge_constructor=""
+
 [input]
 
 right={

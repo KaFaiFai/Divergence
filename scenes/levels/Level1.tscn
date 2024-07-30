@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b041gmfk3p42a"]
+[gd_scene load_steps=7 format=3 uid="uid://b041gmfk3p42a"]
 
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="1_fdkni"]
 [ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
 [ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="3_b58ww"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
+[ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/entities/EdgeConstructor.tscn" id="5_edblj"]
+[ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/entities/EdgesManager.tscn" id="6_p8vsc"]
 
 [node name="Level1" type="Node2D"]
 
@@ -31,3 +33,8 @@ offset_left = 529.0
 offset_top = 537.0
 offset_right = 529.0
 offset_bottom = 537.0
+Color = Color(1, 1, 1, 1)
+
+[node name="EdgeConstructor" parent="." instance=ExtResource("5_edblj")]
+
+[node name="EdgesManager" parent="." instance=ExtResource("6_p8vsc")]

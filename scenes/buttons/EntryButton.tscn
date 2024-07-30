@@ -8,7 +8,7 @@ resource_local_to_scene = true
 shader = ExtResource("2_ypbq4")
 shader_parameter/color = Color(1, 1, 1, 0)
 
-[node name="EntryButton" type="Control"]
+[node name="EntryButton" type="Control" groups=["entry_button"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
