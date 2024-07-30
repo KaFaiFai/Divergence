@@ -10,23 +10,23 @@
 [node name="Level1" type="Node2D"]
 
 [node name="Goal" parent="." instance=ExtResource("1_fdkni")]
-offset_left = 526.0
-offset_top = 93.0
-offset_right = 526.0
-offset_bottom = 93.0
+offset_left = 505.0
+offset_top = 47.0
+offset_right = 505.0
+offset_bottom = 47.0
 TargetColor = Color(0, 1, 1, 1)
 
 [node name="Mixer" parent="." instance=ExtResource("2_q7khr")]
-offset_left = 249.0
-offset_top = 325.0
-offset_right = 249.0
-offset_bottom = 325.0
+offset_left = 149.0
+offset_top = 223.0
+offset_right = 149.0
+offset_bottom = 223.0
 
 [node name="Prism" parent="." instance=ExtResource("3_b58ww")]
-offset_left = 792.0
-offset_top = 357.0
-offset_right = 792.0
-offset_bottom = 357.0
+offset_left = 744.0
+offset_top = 225.0
+offset_right = 744.0
+offset_bottom = 225.0
 
 [node name="Source" parent="." instance=ExtResource("4_hkl6m")]
 offset_left = 529.0

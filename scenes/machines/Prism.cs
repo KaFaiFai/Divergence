@@ -8,10 +8,10 @@ namespace Scenes.Machines
 {
     public partial class Prism : Control
     {
-        public EntryButton Entry { get => this.GetNode<EntryButton>("EntryButton"); }
-        public ExitButton RedExit { get => this.GetNode<ExitButton>("RedExitButton"); }
-        public ExitButton GreenExit { get => this.GetNode<ExitButton>("GreenExitButton"); }
-        public ExitButton BlueExit { get => this.GetNode<ExitButton>("BlueExitButton"); }
+        public EntryButton Entry { get => GetNode<EntryButton>("GridContainer/EntryButton"); }
+        public ExitButton RedExit { get => GetNode<ExitButton>("GridContainer/RedExitButton"); }
+        public ExitButton GreenExit { get => GetNode<ExitButton>("GridContainer/GreenExitButton"); }
+        public ExitButton BlueExit { get => GetNode<ExitButton>("GridContainer/BlueExitButton"); }
 
         public override void _Ready()
         {

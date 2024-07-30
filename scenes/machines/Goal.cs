@@ -12,14 +12,14 @@ namespace Scenes.Machines
         [Export] public Color TargetColor { get; set; }
         public bool IsCorrect { get => Entry.Color == TargetColor; }
 
-        public EntryButton Entry { get => this.GetNode<EntryButton>("EntryButton"); }
-        public Polygon2D Polygon { get => this.GetNode<Polygon2D>("Polygon2D"); }
+        public EntryButton Entry { get => GetNode<EntryButton>("VBoxContainer/EntryButton"); }
+        public Polygon2D FlagLogo { get => GetNode<Polygon2D>("VBoxContainer/Spacer/Control/FlagLogo"); }
 
         public override void _Ready()
         {
             Entry.ReceivedColor += (color) => OnNewColor(color);
             Entry.RemovedColor += () => OnNewColor(null);
-            Polygon.Color = TargetColor;
+            FlagLogo.Color = TargetColor;
 
             if (this.IsRunningScene())
             {

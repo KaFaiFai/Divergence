@@ -11,10 +11,11 @@ shader_parameter/horn_length = 0.1
 shader_parameter/color = Color(1, 1, 1, 1)
 
 [node name="ExitButton" type="Control" groups=["exit_button"]]
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 60.0
+offset_bottom = 60.0
 script = ExtResource("1_8jnk3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -25,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(32, 32)

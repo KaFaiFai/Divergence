@@ -8,9 +8,9 @@ namespace Scenes.Machines
 {
     public partial class Mixer : Control
     {
-        public EntryButton Entry1 { get => this.GetNode<EntryButton>("EntryButton1"); }
-        public EntryButton Entry2 { get => this.GetNode<EntryButton>("EntryButton2"); }
-        public ExitButton Exit { get => this.GetNode<ExitButton>("ExitButton"); }
+        public EntryButton Entry1 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton1"); }
+        public EntryButton Entry2 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton2"); }
+        public ExitButton Exit { get => GetNode<ExitButton>("VBoxContainer/ExitButton"); }
 
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
