@@ -9,5 +9,6 @@ void fragment() {
 	float angle_from_center = atan(UV.y-0.5, UV.x-0.5);
 	float offset = abs(mod(angle_from_center*float(num_horn)/PI, 2.0)-1.0) * horn_length;
 	float cutoff = 0.5 - horn_length + offset;
-	COLOR = vec4(color.rgb, 1.0 - step(cutoff, length_to_center));
+	float alpha = 1.0 - step(cutoff, length_to_center);
+	COLOR = vec4(color.rgb, alpha);
 }

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgm7btc0x7a0j"]
+
+[ext_resource type="Script" path="res://scenes/machines/Mixer.cs" id="1_fj7ke"]
+[ext_resource type="PackedScene" uid="uid://4ctrj2aiuh01" path="res://scenes/buttons/EntryButton.tscn" id="2_hvyjh"]
+[ext_resource type="PackedScene" uid="uid://cahldpa3xojkn" path="res://scenes/buttons/ExitButton.tscn" id="3_ejlx3"]
+
+[node name="Mixer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fj7ke")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, -32, -32, -32, 32, 0, 0.1, 32, 32, 32, -32)
+
+[node name="EntryButton1" parent="." instance=ExtResource("2_hvyjh")]
+offset_left = -64.0
+offset_top = 34.0
+offset_right = -24.0
+offset_bottom = 74.0
+
+[node name="EntryButton2" parent="." instance=ExtResource("2_hvyjh")]
+offset_left = 18.0
+offset_top = 36.0
+offset_right = 58.0
+offset_bottom = 76.0
+
+[node name="ExitButton" parent="." instance=ExtResource("3_ejlx3")]
+offset_left = -21.0
+offset_top = -82.0
+offset_right = 19.0
+offset_bottom = -42.0

@@ -1,18 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://b041gmfk3p42a"]
+[gd_scene load_steps=5 format=3 uid="uid://b041gmfk3p42a"]
 
-[ext_resource type="PackedScene" uid="uid://be3n1tiyp2w5d" path="res://scenes/entities/ColorSource.tscn" id="1_3t5ko"]
-[ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/entities/Prism.tscn" id="2_op6b1"]
+[ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="1_fdkni"]
+[ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
+[ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="3_b58ww"]
+[ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="ColorSource" parent="." instance=ExtResource("1_3t5ko")]
-offset_left = 255.0
-offset_top = 304.0
-offset_right = 255.0
-offset_bottom = 304.0
+[node name="Goal" parent="." instance=ExtResource("1_fdkni")]
+offset_left = 526.0
+offset_top = 93.0
+offset_right = 526.0
+offset_bottom = 93.0
+TargetColor = Color(0, 1, 1, 1)
 
-[node name="Prism" parent="." instance=ExtResource("2_op6b1")]
-offset_left = 576.0
-offset_top = 323.0
-offset_right = 576.0
-offset_bottom = 323.0
+[node name="Mixer" parent="." instance=ExtResource("2_q7khr")]
+offset_left = 249.0
+offset_top = 325.0
+offset_right = 249.0
+offset_bottom = 325.0
+
+[node name="Prism" parent="." instance=ExtResource("3_b58ww")]
+offset_left = 792.0
+offset_top = 357.0
+offset_right = 792.0
+offset_bottom = 357.0
+
+[node name="Source" parent="." instance=ExtResource("4_hkl6m")]
+offset_left = 529.0
+offset_top = 537.0
+offset_right = 529.0
+offset_bottom = 537.0

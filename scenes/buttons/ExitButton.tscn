@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cahldpa3xojkn"]
+
+[ext_resource type="Script" path="res://scenes/buttons/ExitButton.cs" id="1_8jnk3"]
+[ext_resource type="Shader" path="res://scenes/buttons/ExitButton.gdshader" id="2_dyj48"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rguth"]
+resource_local_to_scene = true
+shader = ExtResource("2_dyj48")
+shader_parameter/num_horn = 17
+shader_parameter/horn_length = 0.1
+shader_parameter/color = Color(1, 1, 1, 1)
+
+[node name="ExitButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8jnk3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_rguth")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32, 32)
+mouse_filter = 2
