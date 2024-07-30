@@ -18,7 +18,7 @@ namespace Scenes.Edges
 
         public Line2D Line { get => GetNode<Line2D>("Line"); }
 
-        private readonly PackedScene _edgeScene = GD.Load<PackedScene>("res://scenes/entities/Edge.tscn");
+        private readonly PackedScene _edgeScene = GD.Load<PackedScene>("res://scenes/edges/Edge.tscn");
 
         public override void _Ready()
         {

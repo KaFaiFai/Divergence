@@ -25,13 +25,14 @@ namespace Scenes.Buttons
         public void ReceiveColor(Color? color)
         {
             Color = color;
+            ShaderMaterial shader = ColorRect.Material as ShaderMaterial;
             if (color == null)
             {
+                shader.SetShaderParameter("color", new Color(0, 0, 0));
                 EmitSignal(SignalName.RemovedColor);
             }
             else
             {
-                ShaderMaterial shader = ColorRect.Material as ShaderMaterial;
                 shader.SetShaderParameter("color", color.Value);
                 EmitSignal(SignalName.ReceivedColor, color.Value);
             }
