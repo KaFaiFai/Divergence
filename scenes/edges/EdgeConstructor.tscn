@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/edges/EdgeConstructor.cs" id="1_aqtqf"]
 
-[node name="EdgeConstructor" type="Node" groups=["edge_constructor"]]
+[node name="EdgeConstructor" type="Node2D" groups=["edge_constructor"]]
 script = ExtResource("1_aqtqf")
 
 [node name="Line" type="Line2D" parent="."]

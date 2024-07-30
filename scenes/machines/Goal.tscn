@@ -28,6 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FlagLogo" type="Polygon2D" parent="VBoxContainer/Spacer/Control"]
+color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(10, 42, 10, -1, 43, -1, 0, -42, -10, -42, -10, 42)
 
 [node name="EntryButton" parent="VBoxContainer" instance=ExtResource("2_enwl4")]

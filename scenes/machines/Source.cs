@@ -8,7 +8,7 @@ namespace Scenes.Machines
     {
         [Export] public Color Color { get; set; }
 
-        public ExitButton Exit { get => this.GetNode<ExitButton>("ExitButton"); }
+        public ExitButton Exit { get => GetNode<ExitButton>("VBoxContainer/ExitButton"); }
 
         public override void _Ready()
         {

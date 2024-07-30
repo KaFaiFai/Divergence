@@ -20,6 +20,7 @@ namespace Scenes.Edges
 
         private void OnCreatedEdge(Edge edge)
         {
+            if (edge.Entry.Color != null) return;
             AddChild(edge);
             edge.Entry.ReceiveColor(edge.Exit.Color);
         }

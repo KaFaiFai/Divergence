@@ -48,6 +48,7 @@ namespace Scenes.Edges
         {
             SelectedExit = exit;
             Line.Points = new Vector2[] { exit.GlobalCenter, exit.GlobalCenter };
+            if (exit.Color != null) Line.DefaultColor = exit.Color.Value;
             GD.Print($"[EdgeConstructor] exit at {exit.GlobalCenter}");
         }
 

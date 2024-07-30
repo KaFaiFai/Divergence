@@ -32,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Polygon2D" type="Polygon2D" parent="VBoxContainer/Spacer/Control"]
+color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(0, 0, -42, -42, -42, 42, 0, 0.1, 42, 42, 42, -42)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
