@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
 [ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="3_b58ww"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
-[ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/entities/EdgeConstructor.tscn" id="5_edblj"]
-[ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/entities/EdgesManager.tscn" id="6_p8vsc"]
+[ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="5_edblj"]
+[ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="6_p8vsc"]
 
 [node name="Level1" type="Node2D"]
 

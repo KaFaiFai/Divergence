@@ -2,7 +2,7 @@ using Godot;
 using Scenes.Buttons;
 using System;
 
-namespace Scenes.Entities
+namespace Scenes.Edges
 {
     public partial class Edge : Line2D
     {

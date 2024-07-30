@@ -4,7 +4,7 @@ using Scripts;
 using System;
 using System.Linq;
 
-namespace Scenes.Entities
+namespace Scenes.Edges
 {
     public partial class EdgesManager : Node
     {

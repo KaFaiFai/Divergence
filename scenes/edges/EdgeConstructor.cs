@@ -4,7 +4,7 @@ using Scenes.Buttons;
 using System;
 using System.Linq;
 
-namespace Scenes.Entities
+namespace Scenes.Edges
 {
     public partial class EdgeConstructor : Node2D
     {
