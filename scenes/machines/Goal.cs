@@ -19,7 +19,11 @@ namespace Scenes.Machines
         public override void _Ready()
         {
             base._Ready();
-            Entry.ColorChanged += (color) => OnNewColor(color);
+            Entry.ColorChanged += (color) =>
+            {
+                GD.Print($"Goal {color}");
+                OnNewColor(color);
+            };
             Entry.ColorRemoved += () => OnNewColor(null);
             FlagLogo.Color = TargetColor;
 

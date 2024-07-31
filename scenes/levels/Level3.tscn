@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://cx8bekfyw34yn"]
+
+[ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_q0hb5"]
+[ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="2_c43tp"]
+[ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="3_2t3cs"]
+[ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="4_37hr2"]
+[ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="5_swcss"]
+[ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="6_66yrw"]
+[ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="6_d47sr"]
+
+[node name="Level3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0hb5")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.79, 0.614357, 0.4266, 1)
+
+[node name="EdgesManager" parent="." instance=ExtResource("2_c43tp")]
+
+[node name="EdgeConstructor" parent="." instance=ExtResource("3_2t3cs")]
+
+[node name="Goal" parent="." instance=ExtResource("4_37hr2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -264.0
+offset_right = -57.0
+offset_bottom = -264.0
+grow_horizontal = 2
+grow_vertical = 2
+TargetColor = Color(0.25, 0.25, 0.5, 1)
+
+[node name="Mixer" parent="." instance=ExtResource("5_swcss")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 195.0
+offset_top = -104.0
+offset_right = 195.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mixer2" parent="." instance=ExtResource("5_swcss")]
+offset_left = 241.0
+offset_top = 200.0
+offset_right = 241.0
+offset_bottom = 200.0
+
+[node name="Prism" parent="." instance=ExtResource("6_66yrw")]
+offset_left = 315.0
+offset_top = 391.0
+offset_right = 315.0
+offset_bottom = 391.0
+
+[node name="Source" parent="." instance=ExtResource("6_d47sr")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = 124.0
+offset_right = 57.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+Color = Color(1, 1, 1, 1)

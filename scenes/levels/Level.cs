@@ -22,9 +22,9 @@ namespace Scenes.Levels
         private void OnGoalColored(Goal goal)
         {
             bool hasWon = Goals.All(g => g.IsCorrect());
-            GD.Print($"Level Won? {hasWon}");
             if (hasWon)
             {
+                GD.Print($"Level Won");
                 if (NextLevelScene != null)
                 {
                     ScreenTransition.Instance.ChangeLevel(NextLevelScene);
