@@ -5,7 +5,7 @@ using System;
 
 namespace Scenes.Machines
 {
-    public partial class Goal : Control
+    public partial class Goal : Draggable
     {
         [Signal] public delegate void ReceivedInputEventHandler();
 
@@ -17,6 +17,7 @@ namespace Scenes.Machines
 
         public override void _Ready()
         {
+            base._Ready();
             Entry.ReceivedColor += (color) => OnNewColor(color);
             Entry.RemovedColor += () => OnNewColor(null);
             FlagLogo.Color = TargetColor;

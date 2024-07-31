@@ -11,18 +11,20 @@ script = ExtResource("1_xfytt")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 268.0
-offset_bottom = 217.0
+offset_right = 228.0
+offset_bottom = 228.0
 columns = 3
 
 [node name="Spacer1" type="Control" parent="GridContainer"]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="GreenExitButton" parent="GridContainer" instance=ExtResource("3_ytlxu")]
 layout_mode = 2
 
 [node name="Spacer2" type="Control" parent="GridContainer"]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RedExitButton" parent="GridContainer" instance=ExtResource("3_ytlxu")]
 layout_mode = 2
@@ -30,6 +32,7 @@ layout_mode = 2
 [node name="Spacer3" type="Control" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="Control" type="Control" parent="GridContainer/Spacer3"]
 layout_mode = 1
@@ -40,6 +43,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Polygon2D" type="Polygon2D" parent="GridContainer/Spacer3/Control"]
 color = Color(0.490196, 0.490196, 0.490196, 1)
@@ -50,9 +54,11 @@ layout_mode = 2
 
 [node name="Spacer4" type="Control" parent="GridContainer"]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="EntryButton" parent="GridContainer" instance=ExtResource("2_lktub")]
 layout_mode = 2
 
 [node name="Spacer5" type="Control" parent="GridContainer"]
 layout_mode = 2
+mouse_filter = 1

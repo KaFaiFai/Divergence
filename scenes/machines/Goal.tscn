@@ -16,6 +16,7 @@ offset_bottom = 40.0
 [node name="Spacer" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="Control" type="Control" parent="VBoxContainer/Spacer"]
 layout_mode = 1
@@ -26,6 +27,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="FlagLogo" type="Polygon2D" parent="VBoxContainer/Spacer/Control"]
 color = Color(0.490196, 0.490196, 0.490196, 1)

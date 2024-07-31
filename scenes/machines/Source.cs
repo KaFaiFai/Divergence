@@ -1,10 +1,11 @@
 using Godot;
 using Scenes.Buttons;
+using Scripts;
 using System;
 
 namespace Scenes.Machines
 {
-    public partial class Source : Control
+    public partial class Source : Draggable
     {
         [Export] public Color Color { get; set; }
 
@@ -12,6 +13,7 @@ namespace Scenes.Machines
 
         public override void _Ready()
         {
+            base._Ready();
             Exit.SetColor(Color);
         }
     }

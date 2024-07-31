@@ -6,7 +6,7 @@ using System;
 
 namespace Scenes.Machines
 {
-    public partial class Prism : Control
+    public partial class Prism : Draggable
     {
         public EntryButton Entry { get => GetNode<EntryButton>("GridContainer/EntryButton"); }
         public ExitButton RedExit { get => GetNode<ExitButton>("GridContainer/RedExitButton"); }
@@ -15,6 +15,7 @@ namespace Scenes.Machines
 
         public override void _Ready()
         {
+            base._Ready();
             Entry.ReceivedColor += (color) => OnNewColor(color);
             Entry.RemovedColor += () => OnNewColor(new(0, 0, 0));
 

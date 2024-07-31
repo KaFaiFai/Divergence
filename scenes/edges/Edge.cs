@@ -22,6 +22,12 @@ namespace Scenes.Edges
             RemoveButton.Pressed += OnRemoveButtonPressed;
         }
 
+        public override void _Process(double delta)
+        {
+            base._Process(delta);
+            UpdateDisplay(); // Exit and Entry can move at any time
+        }
+
         public override void _ExitTree()
         {
             Exit.NewColor -= NewColor;
