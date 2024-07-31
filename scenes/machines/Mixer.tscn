@@ -9,20 +9,26 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_fj7ke")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 228.0
+offset_bottom = 124.0
 
-[node name="ExitButton" parent="VBoxContainer" instance=ExtResource("3_ejlx3")]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="VBoxContainer"]
+[node name="EntryButton1" parent="HBoxContainer/VBoxContainer" instance=ExtResource("2_hvyjh")]
+layout_mode = 2
+
+[node name="EntryButton2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("2_hvyjh")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 mouse_filter = 1
 
-[node name="Control" type="Control" parent="VBoxContainer/Spacer"]
+[node name="Control" type="Control" parent="HBoxContainer/Spacer"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -33,11 +39,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Polygon2D" type="Polygon2D" parent="VBoxContainer/Spacer/Control"]
+[node name="Polygon2D" type="Polygon2D" parent="HBoxContainer/Spacer/Control"]
 color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(0, 0, -42, -42, -42, 42, 0, 0.1, 42, 42, 42, -42)
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Spacer/Control"]
+[node name="HSlider" type="HSlider" parent="HBoxContainer/Spacer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,11 +59,5 @@ grow_vertical = 2
 max_value = 1.0
 step = 0.01
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="EntryButton1" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_hvyjh")]
-layout_mode = 2
-
-[node name="EntryButton2" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_hvyjh")]
+[node name="ExitButton" parent="HBoxContainer" instance=ExtResource("3_ejlx3")]
 layout_mode = 2

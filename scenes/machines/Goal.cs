@@ -13,8 +13,8 @@ namespace Scenes.Machines
 
         static private readonly float _error = 0.05f;
 
-        public EntryButton Entry { get => GetNode<EntryButton>("VBoxContainer/EntryButton"); }
-        public Polygon2D FlagLogo { get => GetNode<Polygon2D>("VBoxContainer/Spacer/Control/FlagLogo"); }
+        public EntryButton Entry { get => GetNode<EntryButton>("Spacer/EntryButton"); }
+        public Polygon2D FlagLogo { get => GetNode<Polygon2D>("Spacer/Control/FlagLogo"); }
 
         public override void _Ready()
         {

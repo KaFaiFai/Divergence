@@ -9,20 +9,17 @@ anchors_preset = 0
 script = ExtResource("1_ibwpl")
 Color = Color(1, 1, 1, 0)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 164.0
+offset_bottom = 100.0
 
-[node name="ExitButton" parent="VBoxContainer" instance=ExtResource("1_67cs8")]
-layout_mode = 2
-
-[node name="Spacer" type="Control" parent="VBoxContainer"]
+[node name="Spacer" type="Control" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 mouse_filter = 1
 
-[node name="Control" type="Control" parent="VBoxContainer/Spacer"]
+[node name="Control" type="Control" parent="HBoxContainer/Spacer"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -33,6 +30,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Polygon2D" type="Polygon2D" parent="VBoxContainer/Spacer/Control"]
+[node name="Polygon2D" type="Polygon2D" parent="HBoxContainer/Spacer/Control"]
 color = Color(0.489622, 0.489622, 0.489622, 1)
-polygon = PackedVector2Array(-27, -10, -27, 40, 27, 40, 27, -10, 11, -10, 41, -35, -41, -35, -11, -10)
+polygon = PackedVector2Array(10, -27, -40, -27, -40, 27, 10, 27, 10, 11, 41, 35, 41, -35, 10, -11)
+
+[node name="ExitButton" parent="HBoxContainer" instance=ExtResource("1_67cs8")]
+layout_mode = 2

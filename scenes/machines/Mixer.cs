@@ -8,10 +8,10 @@ namespace Scenes.Machines
 {
     public partial class Mixer : Draggable
     {
-        public EntryButton Entry1 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton1"); }
-        public EntryButton Entry2 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton2"); }
-        public ExitButton Exit { get => GetNode<ExitButton>("VBoxContainer/ExitButton"); }
-        public HSlider HSlider { get => GetNode<HSlider>("VBoxContainer/Spacer/Control/HSlider"); }
+        public EntryButton Entry1 { get => GetNode<EntryButton>("HBoxContainer/VBoxContainer/EntryButton1"); }
+        public EntryButton Entry2 { get => GetNode<EntryButton>("HBoxContainer/VBoxContainer/EntryButton2"); }
+        public ExitButton Exit { get => GetNode<ExitButton>("HBoxContainer/ExitButton"); }
+        public HSlider HSlider { get => GetNode<HSlider>("HBoxContainer/Spacer/Control/HSlider"); }
 
         public override void _Ready()
         {
