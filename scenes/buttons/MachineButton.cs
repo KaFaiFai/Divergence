@@ -11,7 +11,7 @@ namespace Scenes.Buttons
         [Signal] public delegate void ClickedEventHandler();
 
         public Color? Color { get; private set; }
-        public Vector2 GlobalCenter { get => GlobalPosition + Size * Scale / 2; }
+        public Vector2 GlobalCenter { get => GlobalPosition + GetGlobalTransform().BasisXform(Size) / 2; }
         public bool Disable { get; set; } = false;
 
         public override void _Ready()
@@ -23,7 +23,7 @@ namespace Scenes.Buttons
         {
             if (@event is InputEventMouseButton mbe && mbe.Pressed)
             {
-                GD.Print("[MachineButton] Pressed");
+                GD.Print($"[MachineButton] Pressed {GlobalCenter}, {GetGlobalMousePosition()}");
                 if (!Disable) EmitSignal(SignalName.Clicked);
             }
         }

@@ -11,6 +11,8 @@ namespace Scenes.Machines
 
         [Export] public Color TargetColor { get; set; }
 
+        static private readonly float _error = 0.05f;
+
         public EntryButton Entry { get => GetNode<EntryButton>("VBoxContainer/EntryButton"); }
         public Polygon2D FlagLogo { get => GetNode<Polygon2D>("VBoxContainer/Spacer/Control/FlagLogo"); }
 
@@ -33,7 +35,7 @@ namespace Scenes.Machines
             Color entryColor = Entry.Color.Value;
             Color colorDiff = entryColor - TargetColor;
             float diff = MathF.Abs(colorDiff.R) + MathF.Abs(colorDiff.G) + MathF.Abs(colorDiff.B);
-            return diff < 0.03;
+            return diff < _error;
         }
 
         private void OnNewColor(Color? color)

@@ -14,8 +14,6 @@ namespace Scenes.Buttons
             ColorRemoved += () => UpdateDisplay();
             MouseEntered += () => UpdateDisplay(rotate: true);
             MouseExited += () => UpdateDisplay();
-            //ConnectionCreated += (edge) => UpdateDisplay();
-            //ConnectionRemoved += () => UpdateDisplay();
 
             SetColor(null);
         }
