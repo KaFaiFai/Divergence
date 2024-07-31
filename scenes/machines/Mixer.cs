@@ -39,7 +39,7 @@ namespace Scenes.Machines
             {
                 Color c1 = entry1Color.Value;
                 Color c2 = entry2Color.Value;
-                Color mixedColor = new(c1.R + c2.R, c1.G + c2.G, c1.B + c2.B);
+                Color mixedColor = c1 + c2;
                 Exit.SetColor(mixedColor);
             }
         }
