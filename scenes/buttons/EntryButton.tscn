@@ -1,19 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://4ctrj2aiuh01"]
+[gd_scene load_steps=4 format=3 uid="uid://4ctrj2aiuh01"]
 
 [ext_resource type="Script" path="res://scenes/buttons/EntryButton.cs" id="1_lb71q"]
-[ext_resource type="Shader" path="res://scenes/buttons/EntryButton.gdshader" id="2_ypbq4"]
 [ext_resource type="Shader" path="res://scenes/buttons/Blackhole.gdshader" id="3_f4mve"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dtsb6"]
 resource_local_to_scene = true
-shader = ExtResource("2_ypbq4")
-shader_parameter/color = Color(1, 1, 1, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bgo1q"]
-resource_local_to_scene = true
 shader = ExtResource("3_f4mve")
-shader_parameter/strength = 0.13
-shader_parameter/black_radius = 0.65
+shader_parameter/frequency = 11.0
+shader_parameter/color = Color(1, 1, 1, 1)
 
 [node name="EntryButton" type="Control" groups=["entry_button"]]
 custom_minimum_size = Vector2(60, 60)
@@ -24,7 +18,6 @@ offset_bottom = 60.0
 script = ExtResource("1_lb71q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_dtsb6")
 layout_mode = 1
 anchors_preset = 8
@@ -39,9 +32,3 @@ offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_bgo1q")
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

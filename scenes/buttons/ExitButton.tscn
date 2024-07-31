@@ -1,14 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cahldpa3xojkn"]
 
 [ext_resource type="Script" path="res://scenes/buttons/ExitButton.cs" id="1_8jnk3"]
-[ext_resource type="Shader" path="res://scenes/buttons/ExitButton.gdshader" id="2_dyj48"]
+[ext_resource type="Shader" path="res://scenes/buttons/Sun.gdshader" id="2_dyj48"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rguth"]
 resource_local_to_scene = true
 shader = ExtResource("2_dyj48")
-shader_parameter/num_horn = 17
-shader_parameter/horn_length = 0.1
+shader_parameter/num_horn = 5
+shader_parameter/horn_length = 0.2
 shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/horn_start = 0.3
+shader_parameter/inner_radius = 0.24
 
 [node name="ExitButton" type="Control" groups=["exit_button"]]
 custom_minimum_size = Vector2(60, 60)
