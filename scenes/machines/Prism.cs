@@ -16,12 +16,12 @@ namespace Scenes.Machines
         public override void _Ready()
         {
             base._Ready();
-            Entry.ReceivedColor += (color) => OnNewColor(color);
+            Entry.ChangedColor += (color) => OnNewColor(color);
             Entry.RemovedColor += () => OnNewColor(new(0, 0, 0));
 
             if (this.IsRunningScene())
             {
-                Entry.ReceiveColor(new(1, 1, 1));
+                Entry.SetColor(new(1, 1, 1));
             }
         }
 

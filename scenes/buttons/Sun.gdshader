@@ -1,15 +1,16 @@
 shader_type canvas_item;
 
+uniform vec4 color : source_color = vec4(1.0);
 uniform int num_horn : hint_range(0, 40, 1) = 5;
 uniform float horn_length = 0.2;
-uniform vec4 color : source_color = vec4(1.0);
 uniform float horn_start : hint_range(0.0, 0.5, 0.01) = 0.3;
 uniform float inner_radius : hint_range(0.0, 0.5, 0.01) = 0.2;
-
+uniform bool rotate = false;
 
 void fragment() {
 	float length_to_center = distance(UV, vec2(0.5));
-	float angle_from_center = atan(UV.y-0.5, UV.x-0.5);
+	float angle_from_center = atan(UV.y-0.5, UV.x-0.5)
+		+ TIME * 0.2 * float(rotate);
 	float scaled_angle = angle_from_center * float(num_horn) / PI;
 	float scaled_horn_length = abs(mod(scaled_angle, 2.0)-1.0) * horn_length;
 	float horn_tip = 0.5 - horn_length + scaled_horn_length;

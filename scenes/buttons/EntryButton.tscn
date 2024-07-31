@@ -8,6 +8,7 @@ resource_local_to_scene = true
 shader = ExtResource("3_f4mve")
 shader_parameter/frequency = 11.0
 shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/rotate = false
 
 [node name="EntryButton" type="Control" groups=["entry_button"]]
 custom_minimum_size = Vector2(60, 60)
