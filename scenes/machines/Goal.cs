@@ -7,10 +7,9 @@ namespace Scenes.Machines
 {
     public partial class Goal : Draggable
     {
-        [Signal] public delegate void ReceivedInputEventHandler();
+        [Signal] public delegate void ColoredEventHandler();
 
         [Export] public Color TargetColor { get; set; }
-        public bool IsCorrect { get => Entry.Color == TargetColor; }
 
         public EntryButton Entry { get => GetNode<EntryButton>("VBoxContainer/EntryButton"); }
         public Polygon2D FlagLogo { get => GetNode<Polygon2D>("VBoxContainer/Spacer/Control/FlagLogo"); }
@@ -18,8 +17,8 @@ namespace Scenes.Machines
         public override void _Ready()
         {
             base._Ready();
-            Entry.ChangedColor += (color) => OnNewColor(color);
-            Entry.RemovedColor += () => OnNewColor(null);
+            Entry.ColorChanged += (color) => OnNewColor(color);
+            Entry.ColorRemoved += () => OnNewColor(null);
             FlagLogo.Color = TargetColor;
 
             if (this.IsRunningScene())
@@ -28,9 +27,11 @@ namespace Scenes.Machines
             }
         }
 
+        public bool IsCorrect() => Entry.Color == TargetColor;
+
         private void OnNewColor(Color? color)
         {
-            EmitSignal(SignalName.ReceivedInput);
+            EmitSignal(SignalName.Colored);
         }
     }
 }

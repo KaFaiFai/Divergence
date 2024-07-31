@@ -17,8 +17,8 @@ namespace Scenes.Edges
 
         public override void _Ready()
         {
-            Exit.ChangedColor += NewColor;
-            Exit.RemovedColor += ClearedColor;
+            Exit.ColorChanged += NewColor;
+            Exit.ColorRemoved += ClearedColor;
             RemoveButton.Pressed += OnRemoveButtonPressed;
         }
 
@@ -30,8 +30,8 @@ namespace Scenes.Edges
 
         public override void _ExitTree()
         {
-            Exit.ChangedColor -= NewColor;
-            Exit.RemovedColor -= ClearedColor;
+            Exit.ColorChanged -= NewColor;
+            Exit.ColorRemoved -= ClearedColor;
         }
 
         private void UpdateDisplay()

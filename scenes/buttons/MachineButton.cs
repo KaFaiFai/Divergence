@@ -1,12 +1,13 @@
 using Godot;
+using Scenes.Edges;
 using System;
 
 namespace Scenes.Buttons
 {
     abstract public partial class MachineButton : Control
     {
-        [Signal] public delegate void ChangedColorEventHandler(Color color);
-        [Signal] public delegate void RemovedColorEventHandler();
+        [Signal] public delegate void ColorChangedEventHandler(Color color);
+        [Signal] public delegate void ColorRemovedEventHandler();
         [Signal] public delegate void ClickedEventHandler();
 
         public Color? Color { get; private set; }
@@ -30,8 +31,8 @@ namespace Scenes.Buttons
         public virtual void SetColor(Color? color)
         {
             Color = color;
-            if (color == null) EmitSignal(SignalName.RemovedColor);
-            else EmitSignal(SignalName.ChangedColor, color.Value);
+            if (color == null) EmitSignal(SignalName.ColorRemoved);
+            else EmitSignal(SignalName.ColorChanged, color.Value);
         }
     }
 }

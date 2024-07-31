@@ -15,10 +15,10 @@ namespace Scenes.Machines
         public override void _Ready()
         {
             base._Ready();
-            Entry1.ChangedColor += (color) => OnNewColor(color, null);
-            Entry2.ChangedColor += (color) => OnNewColor(null, color);
-            Entry1.RemovedColor += () => OnNewColor(null, null);
-            Entry2.RemovedColor += () => OnNewColor(null, null);
+            Entry1.ColorChanged += (color) => OnNewColor(color, null);
+            Entry2.ColorChanged += (color) => OnNewColor(null, color);
+            Entry1.ColorRemoved += () => OnNewColor(null, null);
+            Entry2.ColorRemoved += () => OnNewColor(null, null);
 
             if (this.IsRunningScene())
             {

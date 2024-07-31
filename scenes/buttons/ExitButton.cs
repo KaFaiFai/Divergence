@@ -10,18 +10,28 @@ namespace Scenes.Buttons
         public override void _Ready()
         {
             base._Ready();
-            ChangedColor += (color) =>
+            ColorChanged += (color) =>
             {
-                Disable = false;
-                ColorRect.Material.Set("shader_parameter/color", color);
+                Disable = false; 
+                UpdateDisplay(color: color);
             };
-            RemovedColor += () =>
+            ColorRemoved += () =>
             {
                 Disable = true;
-                ColorRect.Material.Set("shader_parameter/color", new Color(0, 0, 0));
+                UpdateDisplay();
             };
+            MouseEntered += () => UpdateDisplay(rotate: true);
+            MouseExited += () => UpdateDisplay();
 
             SetColor(null);
+        }
+
+        private void UpdateDisplay(Color? color = null, bool? rotate = null)
+        {
+            Color colorValue = color ?? Color ?? new Color(0, 0, 0);
+            ColorRect.Material.Set("shader_parameter/color", colorValue);
+            bool rotateValue = rotate ?? Color != null;
+            ColorRect.Material.Set("shader_parameter/rotate", rotateValue);
         }
     }
 }
