@@ -1,40 +1,137 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1132s2ww5jk5"]
+[gd_scene load_steps=9 format=3 uid="uid://c1132s2ww5jk5"]
 
 [ext_resource type="Script" path="res://scenes/screens/ScreenTransition.cs" id="1_42gwc"]
-[ext_resource type="Shader" path="res://scenes/screens/RainbowIn.gdshader" id="2_pghmx"]
+[ext_resource type="Shader" path="res://scenes/screens/Rainbow.gdshader" id="2_pghmx"]
 
 [sub_resource type="Gradient" id="Gradient_gyobc"]
-offsets = PackedFloat32Array(0.0819672, 0.508197, 0.827869)
-colors = PackedColorArray(0.903806, 0.351328, 0.684904, 1, 0.929402, 0.506428, 0.406598, 1, 0.826237, 0.661989, 0.305145, 1)
+offsets = PackedFloat32Array(0.0819672, 0.270492, 0.442623, 0.622951, 0.778689, 0.942623)
+colors = PackedColorArray(0.903806, 0.351328, 0.684904, 1, 0.929402, 0.506428, 0.406598, 1, 0.826237, 0.661989, 0.305145, 1, 0.439741, 0.703734, 0.313061, 1, 0.395711, 0.769533, 0.611866, 1, 0.44623, 0.705991, 0.834998, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_7clnx"]
 gradient = SubResource("Gradient_gyobc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8pnqh"]
 shader = ExtResource("2_pghmx")
-shader_parameter/time = 0.0
+shader_parameter/time = -2.89
+shader_parameter/num_gradients = 7.0
+shader_parameter/angle = 2.05
+shader_parameter/offset = Vector2(0, -0.435)
+shader_parameter/aspect_ratio = 1.77778
 shader_parameter/gradient = SubResource("GradientTexture1D_7clnx")
-
-[sub_resource type="Animation" id="Animation_2pnr4"]
-resource_name = "level_out"
-
-[sub_resource type="Animation" id="Animation_owgnj"]
-resource_name = "level_in"
 
 [sub_resource type="Animation" id="Animation_0st1i"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainbowTransition:material:shader_parameter/time")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.89]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainbowTransition:material:shader_parameter/offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -0.435)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainbowTransition:material:shader_parameter/angle")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.05]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainbowTransition:material:shader_parameter/num_gradients")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [7.0]
+}
+
+[sub_resource type="Animation" id="Animation_owgnj"]
+resource_name = "rainbow_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainbowTransition:material:shader_parameter/time")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.262, 2.49]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainbowTransition:material:shader_parameter/offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -0.435), Vector2(0, -0.435)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainbowTransition:material:shader_parameter/angle")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.05, 2.05]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainbowTransition:material:shader_parameter/num_gradients")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [7.0, 7.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1i7o3"]
 _data = {
 "RESET": SubResource("Animation_0st1i"),
-"level_in": SubResource("Animation_owgnj"),
-"level_out": SubResource("Animation_2pnr4")
+"rainbow_in": SubResource("Animation_owgnj")
 }
 
 [node name="ScreenTransition" type="CanvasLayer"]
 script = ExtResource("1_42gwc")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="RainbowTransition" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_8pnqh")
 anchors_preset = 15
 anchor_right = 1.0
