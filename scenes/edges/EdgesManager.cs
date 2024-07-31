@@ -21,6 +21,11 @@ namespace Scenes.Edges
         private void OnCreatedEdge(Edge edge)
         {
             GD.Print("EdgesManager OnCreatedEdge");
+            foreach (Edge e in AllEdges)
+            {
+                if (e.Exit == edge.Exit) return;
+                if (e.Entry == edge.Entry) return;
+            }
             AddChild(edge);
             edge.Entry.SetColor(edge.Exit.Color);
         }

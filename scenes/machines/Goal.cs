@@ -27,7 +27,14 @@ namespace Scenes.Machines
             }
         }
 
-        public bool IsCorrect() => Entry.Color == TargetColor;
+        public bool IsCorrect()
+        {
+            if (Entry.Color == null) return false;
+            Color entryColor = Entry.Color.Value;
+            Color colorDiff = entryColor - TargetColor;
+            float diff = MathF.Abs(colorDiff.R) + MathF.Abs(colorDiff.G) + MathF.Abs(colorDiff.B);
+            return diff < 0.03;
+        }
 
         private void OnNewColor(Color? color)
         {

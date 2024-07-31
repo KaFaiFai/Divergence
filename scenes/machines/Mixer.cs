@@ -11,6 +11,7 @@ namespace Scenes.Machines
         public EntryButton Entry1 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton1"); }
         public EntryButton Entry2 { get => GetNode<EntryButton>("VBoxContainer/HBoxContainer/EntryButton2"); }
         public ExitButton Exit { get => GetNode<ExitButton>("VBoxContainer/ExitButton"); }
+        public HSlider HSlider { get => GetNode<HSlider>("VBoxContainer/Spacer/Control/HSlider"); }
 
         public override void _Ready()
         {
@@ -19,6 +20,7 @@ namespace Scenes.Machines
             Entry2.ColorChanged += (color) => OnNewColor(null, color);
             Entry1.ColorRemoved += () => OnNewColor(null, null);
             Entry2.ColorRemoved += () => OnNewColor(null, null);
+            HSlider.ValueChanged += (_) => OnNewColor(null, null);
 
             if (this.IsRunningScene())
             {
@@ -39,7 +41,7 @@ namespace Scenes.Machines
             {
                 Color c1 = entry1Color.Value;
                 Color c2 = entry2Color.Value;
-                Color mixedColor = c1 + c2;
+                Color mixedColor = ColorOp.AlphaBlend(c1, c2, (float)HSlider.Value);
                 Exit.SetColor(mixedColor);
             }
         }
