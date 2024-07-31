@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgey3i2oqf7xj"]
+[gd_scene load_steps=8 format=3 uid="uid://b041gmfk3p42a"]
 
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="1_fdkni"]
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_ufcqr"]
-[ext_resource type="PackedScene" uid="uid://b041gmfk3p42a" path="res://scenes/levels/Level2.tscn" id="2_ohogq"]
+[ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
 [ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="3_b58ww"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="5_edblj"]
 [ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="6_p8vsc"]
 
-[node name="Level1" type="Control"]
+[node name="Level2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +16,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ufcqr")
-NextLevelScene = ExtResource("2_ohogq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -46,43 +45,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -412.0
-offset_top = -185.0
-offset_right = -412.0
-offset_bottom = -185.0
+offset_left = -57.0
+offset_top = -264.0
+offset_right = -57.0
+offset_bottom = -264.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(1, 0, 0, 1)
+TargetColor = Color(0, 1, 1, 1)
 
-[node name="Goal2" parent="." instance=ExtResource("1_fdkni")]
+[node name="Mixer" parent="." instance=ExtResource("2_q7khr")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -304.0
-offset_right = -62.0
-offset_bottom = -304.0
+offset_left = -454.0
+offset_top = -94.0
+offset_right = -454.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0, 1, 0, 1)
-
-[node name="Goal3" parent="." instance=ExtResource("1_fdkni")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 304.0
-offset_top = -174.0
-offset_right = 304.0
-offset_bottom = -174.0
-grow_horizontal = 2
-grow_vertical = 2
-TargetColor = Color(0, 0, 1, 1)
 
 [node name="Prism" parent="." instance=ExtResource("3_b58ww")]
 layout_mode = 1
@@ -91,10 +74,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -124.0
-offset_top = -113.0
-offset_right = -124.0
-offset_bottom = -113.0
+offset_left = 262.0
+offset_top = -86.0
+offset_right = 262.0
+offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -106,9 +89,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -57.0
-offset_top = 134.0
+offset_top = 118.0
 offset_right = -57.0
-offset_bottom = 134.0
+offset_bottom = 118.0
 grow_horizontal = 2
 grow_vertical = 2
 Color = Color(1, 1, 1, 1)

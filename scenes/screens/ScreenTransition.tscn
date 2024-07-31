@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1132s2ww5jk5"]
+
+[ext_resource type="Script" path="res://scenes/screens/ScreenTransition.cs" id="1_42gwc"]
+[ext_resource type="Shader" path="res://scenes/screens/RainbowIn.gdshader" id="2_pghmx"]
+
+[sub_resource type="Gradient" id="Gradient_gyobc"]
+offsets = PackedFloat32Array(0.0819672, 0.508197, 0.827869)
+colors = PackedColorArray(0.903806, 0.351328, 0.684904, 1, 0.929402, 0.506428, 0.406598, 1, 0.826237, 0.661989, 0.305145, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7clnx"]
+gradient = SubResource("Gradient_gyobc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8pnqh"]
+shader = ExtResource("2_pghmx")
+shader_parameter/time = 0.0
+shader_parameter/gradient = SubResource("GradientTexture1D_7clnx")
+
+[sub_resource type="Animation" id="Animation_2pnr4"]
+resource_name = "level_out"
+
+[sub_resource type="Animation" id="Animation_owgnj"]
+resource_name = "level_in"
+
+[sub_resource type="Animation" id="Animation_0st1i"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1i7o3"]
+_data = {
+"RESET": SubResource("Animation_0st1i"),
+"level_in": SubResource("Animation_owgnj"),
+"level_out": SubResource("Animation_2pnr4")
+}
+
+[node name="ScreenTransition" type="CanvasLayer"]
+script = ExtResource("1_42gwc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8pnqh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1i7o3")
+}

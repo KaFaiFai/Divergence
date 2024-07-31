@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkb0a47os0rkb"]
+
+[ext_resource type="Script" path="res://scenes/screens/Game.cs" id="1_assj6"]
+[ext_resource type="PackedScene" uid="uid://dgmbmt1kjvapw" path="res://scenes/levels/Level0.tscn" id="2_0y5bn"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_assj6")
+
+[node name="Level0" parent="." instance=ExtResource("2_0y5bn")]
+layout_mode = 1

@@ -14,6 +14,10 @@ config/name="Divergence"
 config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ScreenTransition="*res://scenes/screens/ScreenTransition.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
