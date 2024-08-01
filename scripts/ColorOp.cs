@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+// TODO: maybe preform operations in sRGB space?
 namespace Scripts
 {
     /// <summary>
@@ -23,17 +24,25 @@ namespace Scripts
             Color? r = color.R == 0 ? null : new(color.R, color.R / 10, color.R / 10);
             Color? g = color.G == 0 ? null : new(color.G / 10, color.G, color.G / 10);
             Color? b = color.B == 0 ? null : new(color.B / 10, color.B / 10, color.B);
-            r = r?.LinearToSrgb();
-            g = g?.LinearToSrgb();
-            b = b?.LinearToSrgb();
             return (r, g, b);
         }
 
         static public Color AlphaBlend(Color color1, Color color2, float alpha)
         {
-            Color blendedColor = color1.SrgbToLinear() * (1 - alpha) + color2.SrgbToLinear() * alpha;
-            blendedColor = blendedColor.LinearToSrgb();
+            Color blendedColor = color1 * (1 - alpha) + color2 * alpha;
             return blendedColor;
+        }
+
+        static public Color AddTint(Color color, float p)
+        {
+            Color tint = AlphaBlend(color, new Color(1, 1, 1), p);
+            return tint;
+        }
+
+        static public Color AddShade(Color color, float p)
+        {
+            Color shade = AlphaBlend(color, new Color(0, 0, 0), p);
+            return shade;
         }
     }
 }

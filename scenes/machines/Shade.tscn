@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://herc37oct7y5"]
+
+[ext_resource type="Script" path="res://scenes/machines/Shade.cs" id="1_kbsbd"]
+[ext_resource type="PackedScene" uid="uid://4ctrj2aiuh01" path="res://scenes/buttons/EntryButton.tscn" id="2_wtdeu"]
+[ext_resource type="PackedScene" uid="uid://cahldpa3xojkn" path="res://scenes/buttons/ExitButton.tscn" id="3_a8lyf"]
+
+[node name="Shade" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kbsbd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 228.0
+offset_bottom = 124.0
+
+[node name="EntryButton" parent="HBoxContainer" instance=ExtResource("2_wtdeu")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Control" type="Control" parent="HBoxContainer/Spacer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Polygon2D" type="Polygon2D" parent="HBoxContainer/Spacer/Control"]
+color = Color(0.490196, 0.490196, 0.490196, 1)
+polygon = PackedVector2Array(-40, 10, -40, 40, 40, 40, 40, -40, 10, -40, 10, 10)
+
+[node name="Polygon2D2" type="Polygon2D" parent="HBoxContainer/Spacer/Control"]
+color = Color(0.490196, 0.490196, 0.490196, 1)
+polygon = PackedVector2Array(-35, -35, -35, -10, -10, -10, -10, -35)
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/Spacer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 28.0
+offset_right = 49.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.01
+
+[node name="ExitButton" parent="HBoxContainer" instance=ExtResource("3_a8lyf")]
+layout_mode = 2
