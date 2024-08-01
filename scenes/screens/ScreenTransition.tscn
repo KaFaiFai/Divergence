@@ -129,6 +129,7 @@ _data = {
 }
 
 [node name="ScreenTransition" type="CanvasLayer"]
+layer = 10
 script = ExtResource("1_42gwc")
 
 [node name="RainbowTransition" type="ColorRect" parent="."]

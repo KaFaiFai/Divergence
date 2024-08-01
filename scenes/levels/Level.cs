@@ -25,10 +25,8 @@ namespace Scenes.Levels
             if (hasWon)
             {
                 GD.Print($"Level Won");
-                if (NextLevelScene != null)
-                {
-                    ScreenTransition.Instance.ToLevel(NextLevelScene);
-                }
+                if (NextLevelScene != null) ScreenTransition.Instance.ToLevel(NextLevelScene);
+                else ScreenTransition.Instance.ToGameEnd();
             }
         }
     }

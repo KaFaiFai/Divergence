@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="4_44ykd"]
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="5_ojfdj"]
 [ext_resource type="PackedScene" path="res://scenes/machines/Shade.tscn" id="5_p1tne"]
-[ext_resource type="PackedScene" path="res://scenes/machines/Tint.tscn" id="6_yn3b0"]
+[ext_resource type="PackedScene" uid="uid://c7xbdx1xxm002" path="res://scenes/machines/Tint.tscn" id="6_yn3b0"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="7_5hqf2"]
 
 [node name="Level6" type="Control"]

@@ -45,7 +45,7 @@ offset_right = 313.0
 offset_bottom = -139.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0.87, 0.29, 0.29, 1)
+TargetColor = Color(0.75, 0.25, 0.25, 1)
 
 [node name="Goal2" parent="." instance=ExtResource("4_ceceq")]
 layout_mode = 1
@@ -60,7 +60,7 @@ offset_right = 314.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0.17, 0.52, 0.17, 1)
+TargetColor = Color(0.22, 0.22, 0.65, 1)
 
 [node name="Mixer" parent="." instance=ExtResource("5_4gxmm")]
 layout_mode = 1
