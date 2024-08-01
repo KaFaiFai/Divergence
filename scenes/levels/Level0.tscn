@@ -43,7 +43,7 @@ offset_right = 186.0
 offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(1, 1, 1, 1)
+TargetColor = Color(0.286275, 0.788235, 0.411765, 1)
 
 [node name="Source" parent="." instance=ExtResource("7_8o620")]
 layout_mode = 1
@@ -58,4 +58,4 @@ offset_right = -343.0
 offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 2
-Color = Color(1, 1, 1, 1)
+Color = Color(0.2844, 0.79, 0.4108, 1)

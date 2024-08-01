@@ -27,14 +27,10 @@ namespace Scenes.Machines
 
         private void OnNewColor(Color color)
         {
-            if (color.R == 0) RedExit.SetColor(null);
-            else RedExit.SetColor(new(color.R, 0, 0));
-
-            if (color.G == 0) GreenExit.SetColor(null);
-            else GreenExit.SetColor(new(0, color.G, 0));
-
-            if (color.B == 0) BlueExit.SetColor(null);
-            else BlueExit.SetColor(new(0, 0, color.B));
+            var (r, g, b) = ColorOp.Diverge(color);
+            RedExit.SetColor(r);
+            GreenExit.SetColor(g);
+            BlueExit.SetColor(b);
         }
     }
 }

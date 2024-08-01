@@ -13,18 +13,19 @@ script = ExtResource("1_xfytt")
 layout_mode = 0
 offset_right = 228.0
 offset_bottom = 228.0
+mouse_filter = 2
 columns = 3
 
 [node name="Spacer1" type="Control" parent="GridContainer"]
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 
 [node name="RedExitButton" parent="GridContainer" instance=ExtResource("3_ytlxu")]
 layout_mode = 2
 
 [node name="Spacer2" type="Control" parent="GridContainer"]
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 
 [node name="EntryButton" parent="GridContainer" instance=ExtResource("2_lktub")]
 layout_mode = 2
@@ -54,11 +55,11 @@ layout_mode = 2
 
 [node name="Spacer4" type="Control" parent="GridContainer"]
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 
 [node name="BlueExitButton" parent="GridContainer" instance=ExtResource("3_ytlxu")]
 layout_mode = 2
 
 [node name="Spacer5" type="Control" parent="GridContainer"]
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
