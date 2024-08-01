@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cynmxnalbi1f3" path="res://scenes/machines/Prism.tscn" id="6_i5oi8"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="7_bkle3"]
 
-[node name="Level4" type="Control"]
+[node name="Level5" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

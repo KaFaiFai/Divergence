@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="1_fdkni"]
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_ufcqr"]
-[ext_resource type="PackedScene" uid="uid://lvpsxgaudb4s" path="res://scenes/levels/Level4.tscn" id="2_kk5rv"]
+[ext_resource type="PackedScene" uid="uid://d1g7bjgqopba" path="res://scenes/levels/Level3.tscn" id="2_kk5rv"]
 [ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="5_edblj"]
