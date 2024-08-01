@@ -37,3 +37,14 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(32, 32)
 mouse_filter = 2
+
+[node name="ColorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = -23.0
+offset_right = 90.0
+grow_horizontal = 2
+text = "R: 0.32| G: 0.49| B: 0.89"

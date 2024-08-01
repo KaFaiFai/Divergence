@@ -14,7 +14,9 @@ namespace Scenes.Machines
         static private readonly float _error = 0.05f;
 
         public EntryButton Entry { get => GetNode<EntryButton>("HBoxContainer/EntryButton"); }
+        public Control Spacer { get => GetNode<Control>("HBoxContainer/Spacer"); }
         public Polygon2D FlagLogo { get => GetNode<Polygon2D>("HBoxContainer/Spacer/Control/FlagLogo"); }
+        public Label ColorLabel { get => GetNode<Label>("ColorLabel"); }
 
         public override void _Ready()
         {
@@ -26,6 +28,13 @@ namespace Scenes.Machines
             };
             Entry.ColorRemoved += () => OnNewColor(null);
             FlagLogo.Color = TargetColor;
+            Spacer.MouseEntered += () =>
+            {
+                ColorLabel.Visible = true;
+                ColorLabel.Text = $"R: {TargetColor.R:F2}| G: {TargetColor.G:F2}| B: {TargetColor.B:F2}";
+            };
+            Spacer.MouseExited += () => { ColorLabel.Visible = false; };
+            ColorLabel.Visible = false;
 
             if (this.IsRunningScene())
             {
