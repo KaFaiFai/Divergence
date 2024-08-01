@@ -13,10 +13,10 @@ namespace Scenes.Screens
         public AnimationPlayer AnimationPlayer { get => GetNode<AnimationPlayer>("AnimationPlayer"); }
 
         private readonly PackedScene _gameScene = GD.Load<PackedScene>("res://scenes/screens/Game.tscn");
+        private readonly PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/screens/Menu.tscn");
 
         public override void _EnterTree()
         {
-            GD.Print("ScreenTransition _EnterTree");
             _instance = this;
             Visible = false;
         }
@@ -26,7 +26,7 @@ namespace Scenes.Screens
             RainbowTransition.Resized += OnRainbowTransitionResized;
         }
 
-        public async void ChangeLevel(PackedScene levelScene)
+        public async void ToLevel(PackedScene levelScene)
         {
             GD.Print("ScreenTransition ChangeLevel");
             Visible = true;
@@ -42,6 +42,11 @@ namespace Scenes.Screens
             AnimationPlayer.PlayBackwards("rainbow_in");
             await ToSignal(AnimationPlayer, AnimationPlayer.SignalName.AnimationFinished);
             Visible = false;
+        }
+
+        public void ToMenu()
+        {
+            GetTree().ChangeSceneToPacked(_menuScene);
         }
 
         private void OnRainbowTransitionResized()

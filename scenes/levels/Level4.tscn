@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://lvpsxgaudb4s"]
+[gd_scene load_steps=8 format=3 uid="uid://lvpsxgaudb4s"]
 
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_2vu32"]
-[ext_resource type="PackedScene" uid="uid://lvpsxgaudb4s" path="res://scenes/levels/Level5.tscn" id="2_0y1uj"]
 [ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="2_rd782"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="3_jsu3v"]
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="4_dvl1x"]
@@ -17,7 +16,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2vu32")
-NextLevelScene = ExtResource("2_0y1uj")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1

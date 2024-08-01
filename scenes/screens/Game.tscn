@@ -14,3 +14,17 @@ script = ExtResource("1_assj6")
 
 [node name="Level0" parent="." instance=ExtResource("2_0y5bn")]
 layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 23.0
+offset_right = -28.0
+offset_bottom = 73.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Menu"
