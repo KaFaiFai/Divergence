@@ -35,15 +35,8 @@ namespace Scenes.Buttons
             bool rotateValue = rotate ?? Color != null;
             ColorRect.Material.Set("shader_parameter/rotate", rotateValue);
 
-            if (showText == true)
-            {
-                ColorLabel.Visible = true;
-                ColorLabel.Text = $"R: {colorValue.R:F2}| G: {colorValue.G:F2}| B: {colorValue.B:F2}";
-            }
-            else if (showText == false)
-            {
-                ColorLabel.Visible = false;
-            }
+            ColorLabel.Text = $"R: {colorValue.R:F2}| G: {colorValue.G:F2}| B: {colorValue.B:F2}";
+            ColorLabel.Visible = showText ?? ColorLabel.Visible;
         }
     }
 }

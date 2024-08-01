@@ -18,12 +18,12 @@ namespace Scripts
         /// <summary>
         /// Custom operation that defines how color diverge through prism
         /// </summary>
-        static public (Color?, Color?, Color?) Diverge(Color colorValue)
+        static public (Color?, Color?, Color?) Diverge(Color color)
         {
-            Color color = colorValue.SrgbToLinear();
-            Color? r = color.R == 0 ? null : new(color.R, color.R / 10, color.R / 10);
-            Color? g = color.G == 0 ? null : new(color.G / 10, color.G, color.G / 10);
-            Color? b = color.B == 0 ? null : new(color.B / 10, color.B / 10, color.B);
+            //Color color = colorValue.SrgbToLinear();
+            Color? r = color.R == 0 ? null : new(color.R, color.R / 3, color.R / 3);
+            Color? g = color.G == 0 ? null : new(color.G / 3, color.G, color.G / 3);
+            Color? b = color.B == 0 ? null : new(color.B / 3, color.B / 3, color.B);
             return (r, g, b);
         }
 
