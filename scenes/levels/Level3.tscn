@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1g7bjgqopba"]
 
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_q0hb5"]
-[ext_resource type="PackedScene" uid="uid://lvpsxgaudb4s" path="res://scenes/levels/Level5.tscn" id="2_8f1tm"]
+[ext_resource type="PackedScene" uid="uid://lvpsxgaudb4s" path="res://scenes/levels/Level4.tscn" id="2_8f1tm"]
 [ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="2_c43tp"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="3_2t3cs"]
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="4_37hr2"]
@@ -48,10 +48,18 @@ grow_vertical = 2
 TargetColor = Color(0.25, 0.25, 0.75, 1)
 
 [node name="Goal2" parent="." instance=ExtResource("4_37hr2")]
-offset_left = 915.0
-offset_top = 373.0
-offset_right = 915.0
-offset_bottom = 373.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = 30.0
+offset_right = 320.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
 TargetColor = Color(0.21, 0.246, 0.114, 1)
 
 [node name="Mixer" parent="." instance=ExtResource("5_swcss")]
@@ -69,10 +77,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Prism" parent="." instance=ExtResource("6_66yrw")]
-offset_left = 317.0
-offset_top = 319.0
-offset_right = 317.0
-offset_bottom = 319.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -7.0
+offset_right = -232.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Source" parent="." instance=ExtResource("6_d47sr")]
 layout_mode = 1

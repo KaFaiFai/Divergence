@@ -60,16 +60,32 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Mixer2" parent="." instance=ExtResource("5_x5r82")]
-offset_left = 598.0
-offset_top = 419.0
-offset_right = 598.0
-offset_bottom = 419.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 68.0
+offset_right = 17.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Prism" parent="." instance=ExtResource("6_f1pda")]
-offset_left = 99.0
-offset_top = 259.0
-offset_right = 99.0
-offset_bottom = 259.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -458.0
+offset_top = -30.0
+offset_right = -458.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Source" parent="." instance=ExtResource("7_crir7")]
 layout_mode = 1

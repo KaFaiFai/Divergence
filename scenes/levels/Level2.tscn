@@ -76,8 +76,16 @@ grow_vertical = 2
 Color = Color(0.192449, 0.506636, 0.711383, 1)
 
 [node name="Source2" parent="." instance=ExtResource("4_hkl6m")]
-offset_left = 95.0
-offset_top = 337.0
-offset_right = 95.0
-offset_bottom = 337.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = 44.0
+offset_right = -456.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
 Color = Color(0.93, 0.6138, 0.64542, 1)
