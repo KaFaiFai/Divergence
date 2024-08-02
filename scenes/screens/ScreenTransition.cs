@@ -33,11 +33,10 @@ namespace Scenes.Screens
             AnimationPlayer.Play("rainbow_in");
             await ToSignal(AnimationPlayer, AnimationPlayer.SignalName.AnimationFinished);
 
+            GetTree().CurrentScene.QueueFree();
             Game game = _gameScene.Instantiate<Game>();
             game.LevelScene = levelScene;
-            PackedScene gameWithLevel = new();
-            gameWithLevel.Pack(game);
-            GetTree().ChangeSceneToPacked(gameWithLevel);
+            GetTree().Root.AddChild(game);
 
             AnimationPlayer.PlayBackwards("rainbow_in");
             await ToSignal(AnimationPlayer, AnimationPlayer.SignalName.AnimationFinished);

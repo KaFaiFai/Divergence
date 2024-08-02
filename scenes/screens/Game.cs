@@ -7,7 +7,7 @@ namespace Scenes.Screens
 {
     public partial class Game : Control
     {
-        [Export] public PackedScene LevelScene { get; set; }
+        public PackedScene LevelScene { get; set; }
 
         public Button MenuButton { get => GetNode<Button>("CanvasLayer/MenuButton"); }
 
