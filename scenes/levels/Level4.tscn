@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://lvpsxgaudb4s"]
+[gd_scene load_steps=9 format=3 uid="uid://b75bmghc2hopd"]
 
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_2vu32"]
+[ext_resource type="PackedScene" uid="uid://cu73mhr06ugd2" path="res://scenes/levels/Level5.tscn" id="2_gabfg"]
 [ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="2_rd782"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="3_jsu3v"]
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="4_dvl1x"]
@@ -16,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2vu32")
+NextLevelScene = ExtResource("2_gabfg")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -37,13 +39,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 327.0
-offset_top = -51.0
-offset_right = 327.0
-offset_bottom = -51.0
+offset_left = 333.0
+offset_top = -45.0
+offset_right = 333.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0.5, 0.5, 0.666, 1)
+TargetColor = Color(0.84, 0.46, 0.32, 1)
 
 [node name="Mixer" parent="." instance=ExtResource("5_x5r82")]
 layout_mode = 1
@@ -52,10 +54,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -159.0
-offset_right = -120.0
-offset_bottom = -159.0
+offset_left = -101.0
+offset_top = 66.0
+offset_right = -101.0
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -66,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 17.0
-offset_top = 68.0
-offset_right = 17.0
-offset_bottom = 68.0
+offset_left = 122.0
+offset_top = -167.0
+offset_right = 122.0
+offset_bottom = -167.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -80,10 +82,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -458.0
-offset_top = -30.0
-offset_right = -458.0
-offset_bottom = -30.0
+offset_left = -325.0
+offset_top = -216.0
+offset_right = -325.0
+offset_bottom = -216.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -94,11 +96,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -409.0
-offset_top = -254.0
-offset_right = -409.0
-offset_bottom = -254.0
+offset_left = -485.0
+offset_top = -50.0
+offset_right = -485.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = 1.5708
 Color = Color(1, 1, 1, 1)

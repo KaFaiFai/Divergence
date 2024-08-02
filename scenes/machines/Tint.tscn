@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://5o3mejyf2fhy"]
+[gd_scene load_steps=4 format=3 uid="uid://c7xbdx1xxm002"]
 
 [ext_resource type="Script" path="res://scenes/machines/Tint.cs" id="1_mgyxh"]
 [ext_resource type="PackedScene" uid="uid://4ctrj2aiuh01" path="res://scenes/buttons/EntryButton.tscn" id="2_p75nw"]

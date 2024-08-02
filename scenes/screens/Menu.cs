@@ -7,7 +7,7 @@ namespace Scenes.Screens
 {
     public partial class Menu : Control
     {
-        static private readonly int _numLevels = 8;
+        static private readonly int _numLevels = 10;
 
         public GridContainer GridContainer { get => GetNode<GridContainer>("GridContainer"); }
 
@@ -15,7 +15,7 @@ namespace Scenes.Screens
         {
             foreach (var i in Enumerable.Range(0, _numLevels))
             {
-                Button button = new() { Text = $"Level {i}" };
+                Button button = new() { Text = $"Level {i + 1}" };
                 button.Pressed += () =>
                 {
                     PackedScene levelScene = GD.Load<PackedScene>($"res://scenes/levels/Level{i}.tscn");

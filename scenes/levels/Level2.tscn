@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="1_fdkni"]
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_ufcqr"]
-[ext_resource type="PackedScene" uid="uid://d1g7bjgqopba" path="res://scenes/levels/Level3.tscn" id="2_kk5rv"]
+[ext_resource type="PackedScene" uid="uid://cx8bekfyw34yn" path="res://scenes/levels/Level3.tscn" id="2_kk5rv"]
 [ext_resource type="PackedScene" uid="uid://cgm7btc0x7a0j" path="res://scenes/machines/Mixer.tscn" id="2_q7khr"]
 [ext_resource type="PackedScene" uid="uid://cksx2mreljlgj" path="res://scenes/machines/Source.tscn" id="4_hkl6m"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="5_edblj"]
@@ -38,10 +38,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 329.0
-offset_top = -83.0
-offset_right = 329.0
-offset_bottom = -83.0
+offset_left = 302.0
+offset_top = -45.0
+offset_right = 302.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 TargetColor = Color(0.53, 0.55, 0.68, 1)
@@ -53,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.0
-offset_top = -79.0
-offset_right = -73.0
-offset_bottom = -79.0
+offset_left = -110.0
+offset_top = -57.0
+offset_right = -110.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -67,10 +67,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -479.0
-offset_top = -164.0
-offset_right = -479.0
-offset_bottom = -164.0
+offset_left = -453.0
+offset_top = -148.0
+offset_right = -453.0
+offset_bottom = -148.0
 grow_horizontal = 2
 grow_vertical = 2
 Color = Color(0.192449, 0.506636, 0.711383, 1)
@@ -82,10 +82,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -456.0
-offset_top = 44.0
-offset_right = -456.0
-offset_bottom = 44.0
+offset_left = -454.0
+offset_top = 57.0
+offset_right = -454.0
+offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 Color = Color(0.93, 0.6138, 0.64542, 1)

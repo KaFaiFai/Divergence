@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckmkfcsoto8w6"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_0v1ac"]
+
+[node name="GameEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.493166, 0.537817, 0.667132, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -340.0
+offset_top = 243.0
+offset_right = 311.0
+offset_bottom = 375.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[center][wave amp=100 freq=4][rainbow freq=0.2 sat=0.5 val=0.8]Completed[/rainbow][/wave]"
+fit_content = true
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_0v1ac")]

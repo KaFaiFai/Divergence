@@ -14,6 +14,7 @@ namespace Scenes.Screens
 
         private readonly PackedScene _gameScene = GD.Load<PackedScene>("res://scenes/screens/Game.tscn");
         private readonly PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/screens/Menu.tscn");
+        private readonly PackedScene _gameEndScene = GD.Load<PackedScene>("res://scenes/screens/GameEnd.tscn");
 
         public override void _EnterTree()
         {
@@ -46,6 +47,11 @@ namespace Scenes.Screens
         public void ToMenu()
         {
             GetTree().ChangeSceneToPacked(_menuScene);
+        }
+
+        public void ToGameEnd()
+        {
+            GetTree().ChangeSceneToPacked(_gameEndScene);
         }
 
         private void OnRainbowTransitionResized()

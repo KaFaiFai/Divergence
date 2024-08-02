@@ -11,7 +11,7 @@ namespace Scenes.Machines
 
         [Export] public Color TargetColor { get; set; }
 
-        static private readonly float _error = 0.05f;
+        static private readonly float _error = 0.10f;
 
         public EntryButton Entry { get => GetNode<EntryButton>("HBoxContainer/EntryButton"); }
         public Control Spacer { get => GetNode<Control>("HBoxContainer/Spacer"); }
@@ -28,6 +28,7 @@ namespace Scenes.Machines
             };
             Entry.ColorRemoved += () => OnNewColor(null);
             FlagLogo.Color = TargetColor;
+
             Spacer.MouseEntered += () =>
             {
                 ColorLabel.Visible = true;

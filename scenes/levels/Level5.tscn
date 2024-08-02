@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://lvpsxgaudb4s"]
+[gd_scene load_steps=9 format=3 uid="uid://cu73mhr06ugd2"]
 
 [ext_resource type="Script" path="res://scenes/levels/Level.cs" id="1_1qnxn"]
+[ext_resource type="PackedScene" uid="uid://ss7hrc1o1cp2" path="res://scenes/levels/Level6.tscn" id="2_p5555"]
 [ext_resource type="PackedScene" uid="uid://dqcpjv50vyi1x" path="res://scenes/edges/EdgesManager.tscn" id="2_y57xy"]
 [ext_resource type="PackedScene" uid="uid://d0r2f8fptdrmm" path="res://scenes/edges/EdgeConstructor.tscn" id="3_bqlp4"]
 [ext_resource type="PackedScene" uid="uid://pukxca0vx8yi" path="res://scenes/machines/Goal.tscn" id="4_ceceq"]
@@ -16,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1qnxn")
+NextLevelScene = ExtResource("2_p5555")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -37,13 +39,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = -153.0
-offset_right = 344.0
-offset_bottom = -153.0
+offset_left = 313.0
+offset_top = -139.0
+offset_right = 313.0
+offset_bottom = -139.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0.8, 0.267, 0.267, 1)
+TargetColor = Color(0.75, 0.25, 0.25, 1)
 
 [node name="Goal2" parent="." instance=ExtResource("4_ceceq")]
 layout_mode = 1
@@ -52,13 +54,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 340.0
-offset_top = 80.0
-offset_right = 340.0
-offset_bottom = 80.0
+offset_left = 314.0
+offset_top = 81.0
+offset_right = 314.0
+offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-TargetColor = Color(0.172, 0.518, 0.172, 1)
+TargetColor = Color(0.22, 0.22, 0.65, 1)
 
 [node name="Mixer" parent="." instance=ExtResource("5_4gxmm")]
 layout_mode = 1
@@ -67,10 +69,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 51.0
-offset_top = -147.0
-offset_right = 51.0
-offset_bottom = -147.0
+offset_left = 40.0
+offset_top = -190.0
+offset_right = 40.0
+offset_bottom = -190.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -81,8 +83,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -161.0
-offset_right = -161.0
+offset_left = -213.0
+offset_top = 9.0
+offset_right = -213.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -93,10 +97,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -431.0
-offset_top = -156.0
-offset_right = -431.0
-offset_bottom = -156.0
+offset_left = -441.0
+offset_top = -135.0
+offset_right = -441.0
+offset_bottom = -135.0
 grow_horizontal = 2
 grow_vertical = 2
 Color = Color(0.6762, 0.5124, 0.84, 1)
@@ -108,10 +112,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -424.0
-offset_top = 25.0
-offset_right = -424.0
-offset_bottom = 25.0
+offset_left = -439.0
+offset_top = 36.0
+offset_right = -439.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
 Color = Color(0.92, 0.523787, 0.2208, 1)
